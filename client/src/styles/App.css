@@ -1,0 +1,20 @@
+
+.container {
+  font-family: system-ui, sans-serif;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 200px 100px;
+  grid-template-areas: 
+    "topbar1  topbar2 topbar3"
+    "sidebar1 main1   main2"
+    "sidebar2 footer1 footer2";
+  justify-content: center;
+  align-content: center;
+}
+
+.apptitle {
+  grid-area: topbar2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
