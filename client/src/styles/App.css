@@ -18,3 +18,9 @@
   align-items: center;
   justify-content: center;
 }
+
+.searchbox {
+  grid-area: main1;
+  display: flex;
+  justify-content: center;
+}
