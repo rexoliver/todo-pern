@@ -8,15 +8,16 @@ const InputTodo = () => {
         e.preventDefault()
         try {
             const body = {description};
-            const response = fetch("http://localhost:5000/todos", {
+            const response = await fetch("http://localhost:3000/todos", {
                 method: "POST",
                 headers: { "Content-Type": "application/json"},
                 body: JSON.stringify(body)
             });
             console.log(response);
+            window.location.href = "/"
 
         } catch (err:any) {
-
+            console.log(err.message);
         }
     }
 
@@ -24,7 +25,7 @@ const InputTodo = () => {
         <>
             <h1 className="apptitle">Pern Todo List</h1>
             <div className="searchbox">
-                <form>
+                <form onSubmit={onSubmitForm}>
                     <input type='text' 
                         value={description} 
                         onChange={e => setDescription(e.target.value)}/>
