@@ -3,13 +3,12 @@
   font-family: system-ui, sans-serif;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 100px 200px 100px;
+  grid-template-rows: auto auto auto 200px;
   grid-template-areas: 
     "topbar1  topbar2 topbar3"
     "sidebar1 main1   main2"
-    "sidebar2 footer1 footer2";
-  justify-content: center;
-  align-content: center;
+    "sidebar2 main12  main22"
+    "sidebar3 main13  main23";
 }
 
 .apptitle {
@@ -24,3 +23,23 @@
   display: flex;
   justify-content: center;
 }
+
+.todolist {
+  grid-area: main12;
+  display: flex;
+  justify-content: center;
+}
+
+.formattable {
+  grid-area: main13;
+  display: table;
+}
+
+.forrmattable td { 
+  border: 1px solid whitesmoke; 
+}
+th, td {
+  border: 1px solid whitesmoke;
+  padding: 3px;
+}
+
