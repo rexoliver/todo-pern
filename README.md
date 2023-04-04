@@ -14,14 +14,23 @@ Tutorial application for building a full stack PERN (Postgres, Express, React, N
 To install this project, follow these steps:
 
 1. Clone the repository: `git clone https://github.com/your-username/project-name.git`
-2. Install the dependencies: `npm install`
+2. Change directory to client: `cd client`
+3. Install the dependencies: `npm install`
+4. Change directory to server: `cd ../server`
+5. Install the dependencies: `npm install`
 
 ## Usage
 
-To use this project, follow these steps:
+To use this project locally, follow these steps:
 
-1. Start the server: `npm start`
-2. Open the application in your browser: `http://localhost:3000`
+
+1. Change directory to root of project
+2. Initiate DB: `psql -f server/src/database.sql`
+3. Change directory to server: `cd server`
+4. Launch server: `npm run dev`
+5. Change directory to client: `cd ../client`
+6. Launch client: `npm start`
+7. Open the application in your browser: `http://localhost:3001`
 
 ## Contributing
 
