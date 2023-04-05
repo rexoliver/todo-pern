@@ -1,6 +1,7 @@
 import React, {Fragment, useEffect, useState} from "react";
 import '../styles/components.css'
 import '../styles/App.css'
+import EditTodo from "./EditTodo";
 
 interface Todo {
     todo_id: number;
@@ -42,7 +43,7 @@ const ListTodos = () => {
 
     return (
         <>
-            <h2 className="todolist">ListTodos</h2>
+            <h2 className="todolist">List of Todos</h2>
             <table className="formattable">
                 <thead> 
                     <tr>
@@ -55,7 +56,9 @@ const ListTodos = () => {
                         {todos.map((todo: Todo) => (
                             <tr key={todo.todo_id}>
                                 <td>{todo.description}</td>
-                                <td>Edit</td>
+                                <td>
+                                    <EditTodo/>
+                                </td>
                                 <td><button onClick={() => deleteTodo(todo.todo_id)}>Delete</button></td>
                             </tr>
                         ))}   
